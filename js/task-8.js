@@ -1,5 +1,7 @@
 import itemsDefault from './gallery-items.js';
 
+// 1
+
 const refs = {
   galleryList: document.querySelector('.js-gallery'), //общий родитель картинок
   modal: document.querySelector('.js-lightbox'), //модальное окно
@@ -65,3 +67,6 @@ function onCloseModal() {
   window.removeEventListener('keydown', onArrowLeftPress);
   window.removeEventListener('keydown', onArrowRightPress);
 }
+
+
+
