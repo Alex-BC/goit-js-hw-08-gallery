@@ -37,7 +37,7 @@ function createGalleryMarkup(elements) {
     .join('');
 }
 
-// Реализация делегирования на галерее ul.js-gallery и получение url большого изображения.
+// // Реализация делегирования на галерее ul.js-gallery и получение url большого изображения.
 
 refs.galleryList.addEventListener('click', onOpenModal);
 
@@ -68,5 +68,61 @@ function onCloseModal() {
   window.removeEventListener('keydown', onArrowRightPress);
 }
 
+// // Закрытие модального окна по клику на div.lightbox__overlay.
 
+// refs.modalOverlay.addEventListener('click', onBOverlayClick);
+
+// function onBOverlayClick(evt) {
+//   if (evt.currentTarget === evt.target) {
+//     onCloseModal();
+//   }
+// }
+
+// // Закрытие модального окна по нажатию клавиши ESC.
+
+// function onEscKeyPress(event) {
+//   const ESC_KEY_CODE = 'Escape';
+//   const isEscKey = event.code === ESC_KEY_CODE;
+
+//   if (isEscKey) {
+//     onCloseModal();
+//   }
+// }
+
+// // Пролистывание изображений галереи в открытом модальном окне клавишами "влево" и "вправо".
+// //ArrowLeft
+
+// function onArrowLeftPress(evt) {
+//   const ARR_LEFT_KEY_CODE = 'ArrowLeft';
+//   const isArrLeftKey = evt.code === ARR_LEFT_KEY_CODE;
+
+//   if (isArrLeftKey) {
+//     const sources = itemsDefault.map(({ original }) => original);
+//     let indexOfCurrentImg = sources.indexOf(refs.modalImage.src);
+
+//     if (indexOfCurrentImg === 0) {
+//       indexOfCurrentImg = sources.length;
+//     }
+//     refs.modalImage.src = sources[indexOfCurrentImg - 1];
+//     console.log(indexOfCurrentImg);
+//   }
+// }
+
+// //ArrowRight
+
+// function onArrowRightPress(evt) {
+//   const ARR_RIGHT_KEY_CODE = 'ArrowRight';
+//   const isArrRightKey = evt.code === ARR_RIGHT_KEY_CODE;
+
+//   if (isArrRightKey) {
+//     const sources = itemsDefault.map(({ original }) => original);
+//     let indexOfCurrentImg = sources.indexOf(refs.modalImage.src);
+
+//     if (indexOfCurrentImg + 1 > sources.length - 1) {
+//       indexOfCurrentImg = -1;
+//     }
+//     refs.modalImage.src = sources[indexOfCurrentImg + 1];
+//     console.log(indexOfCurrentImg + 1);
+//   }
+// }
 
